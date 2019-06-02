@@ -12,7 +12,7 @@ countries = await res.json();
 //filer states
 const searchCountries = searchText =>{
 //get matches to current text input 
-let matches = countries.filter(state =>{
+let matches = countries.filter(country =>{
 const regex = new RegExp(`^${searchText}`, 'gi');
 return country.name.match(regex) || country.abbr.match(regex);
 });
